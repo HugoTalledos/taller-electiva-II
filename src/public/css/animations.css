@@ -1,0 +1,14 @@
+.fadein {
+	transform: translateX(20px);
+	opacity: 0;
+	visibility: visible;
+	animation: fadein 3s;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

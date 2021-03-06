@@ -1,0 +1,53 @@
+{
+    "book": [
+        {
+            "id": 9134,
+            "title": "Las Crónicas de Narnia: El león, la bruja y el armario",
+            "publicationYear": 1950,
+            "author": "C.S. Lewis",
+            "description": "Cuatro niños descubren un armario que les sirve de puerta de acceso a Narnia, un país congelado en un invierno eterno y sin Navidad. Entonces, cumpliendo con las viejas profecías, los niños (junto con el león Aslan) serán encargados de liberar al reino de la tiranía de la Bruja Blanca(Reina Jadis como se presenta mejor en el libro El Sobrino del Mago) y recuperar el verano, la luz y la alegría para todos los habitantes de Narnia."
+        },
+        {
+            "id": 3068,
+            "title": "Las Crónicas de Narnia: El príncipe Caspian",
+            "publicationYear": 1951,
+            "author": "C.S. Lewis",
+            "description": "Un príncipe, al que se le ha negado el trono (que es legítimamente suyo), reúne un ejército en un intento desesperado de librar a su país de un rey desleal. Pero al final, es un combate de honor entre dos hombres solos lo que decidirá el destino de todo un mundo."
+        },
+        {
+            "id": 1129,
+            "title": "Las Crónicas de Narnia: La travesía del Viajero del Alba",
+            "publicationYear": 1952,
+            "author": "C.S. Lewis",
+            "description": "Un rey y unos inesperados compañeros de viaje emprenden una travesía que los llevará más allá de toda tierra conocida. A medida que navegan por mares que no aparecen en los mapas, descubren que su misión es más arriesgada de lo que habían imaginado, y que el fin del mundo es, en realidad, el umbral de una tierra incógnita."
+        },
+        {
+            "id": 6321,
+            "title": "Las Crónicas de Narnia: La silla de plata",
+            "publicationYear": 1953,
+            "author": "C.S. Lewis",
+            "description": "A través de peligros inauditos, y cavernas profundas y oscuras, marcha una noble banda de amigos al rescate de un príncipe cautivo. Sin embargo, su misión en las Tierras Inferiores los lleva a enfrentarse cara a cara con una maldad más hermosa y letal de lo que habrían esperado encontrar jamás."
+        },
+        {
+            "id": 1619,
+            "title": "Las Crónicas de Narnia: El caballo y su niño",
+            "publicationYear": 1954,
+            "author": "C.S. Lewis",
+            "description": "Dos fugitivos se encuentran en un viaje desesperado y, con la ayuda de Aslan, unen sus fuerzas no solo para huir, sino también para evitar la conspiración que pretende arrebatar el país y los territorios circundantes al rey de Archenland. Pero una batalla terrible decidirá su destino y también el de Narnia."
+        },
+        {
+            "id": 5595,
+            "title": "Las Crónicas de Narnia: El sobrino del mago",
+            "publicationYear": 1955,
+            "author": "C.S. Lewis",
+            "description": "Dos amigos, víctimas del poder de unos anillos mágicos, son arrojados a otro mundo en el que una malvada hechicera intenta convertirlos en sus esclavos. Pero entonces aparece Aslan, y con su canción va hilando el tejido de un nuevo mundo que recibirá el nombre de Narnia."
+        },
+        {
+            "id": 2713,
+            "title": "Las Crónicas de Narnia: La última batalla",
+            "publicationYear": 1956,
+            "author": "C.S. Lewis",
+            "description": "Durante los últimos días de Narnia, el país se enfrenta a su desafío más cruel; no se trata de un invasor externo, sino de un enemigo interno. Mentiras y traición han echado raíces, y únicamente el rey y un grupo reducido de seguidores leales pueden impedir la destrucción de todo."
+        }
+    ]
+}

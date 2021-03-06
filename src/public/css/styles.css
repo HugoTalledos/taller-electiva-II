@@ -1,0 +1,154 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav {
+	display: flex;
+	background-color: black;
+	margin-bottom: 10px;
+	flex-direction: row;
+}
+.navbar-dark {
+	background-color: black;
+}
+nav ul {
+	display: inline-block;
+	/*margin: 0;
+    padding: 0;*/
+	height: auto;
+	list-style: none;
+}
+nav ul li {
+	list-style: none;
+	float: left;
+}
+nav ul li a {
+	display: block;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: #fff;
+}
+nav ul li :hover {
+	background-color: #ff7f00;
+	color: #fff;
+}
+.nav-logo {
+	width: 80vh;
+}
+.menu-fixed {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	/*izquierda, hacia abajo vertical, tamaño de la sombra, color*/
+	box-shadow: 0px 4px 3px rgb(0, 0, 0, 0.4);
+}
+/*
+@media only screen {
+    ul div li {
+        display: inline-block;
+        margin-left: 80px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    a img {
+        width: 120%;
+        height: 120%;
+    }
+}
+@media only handheld {
+    ul div {
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 3%;
+        margin-right: 5%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+}*/
+
+/*Section style*/
+
+section {
+	position: relative;
+	min-height: 100vh;
+	/* margin: auto;*/
+	padding: 9vh;
+	/* width: auto;*/
+}
+.section-light {
+	background-color: white;
+}
+.section-dark {
+	background-color: #ff7f00;
+}
+.title-section {
+	font-family: 'Oswald', sans-serif;
+	font-size: 10vh;
+}
+.content {
+	padding: 2%;
+}
+.sub-content {
+	padding-top: 2%;
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	flex-basis: auto;
+}
+.sub-content p {
+	font-size: 3vh;
+}
+/**End section style*/
+
+#whoweare img {
+	padding: 5%;
+	flex-shrink: 5;
+}
+#services {
+	display: flex;
+	flex-flow: row wrap;
+}
+.card {
+	margin: 1%;
+}
+.section-light button {
+	background-color: #ff7f00;
+	color: white;
+	font-family: 'Muli', sans-serif;
+	font-size: 3vh;
+	padding: 1%;
+	border: 3px;
+}
+.section-dark button {
+	background-color: #fff;
+	color: black;
+	font-family: 'Muli', sans-serif;
+	font-size: 3vh;
+	padding: 1%;
+	border: 3px;
+}
+footer {
+	background-color: black;
+	position: relative;
+	height: 50vh;
+}
+/*Elements style*/
+
+.content-jobs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+}
+#infrastructuraymineria {
+	height: 30em;
+}
+#infrastructuraymineria img {
+	width: 100px;
+}
