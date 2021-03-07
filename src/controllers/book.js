@@ -6,7 +6,7 @@ const rootDir = path.dirname(require.main.filename);
 const getBook = async (req, res) => {
 	const { id } = req.params;
 	const resp = library.find(book => book.id === parseInt(id));
-	res.send({ status: 200, response: resp });
+	res.render('index.html', { title: 'Taller Grupal', library, message: '', book: resp})
 };
 
 const deleteBook = async (req, res) => {
@@ -18,7 +18,7 @@ const deleteBook = async (req, res) => {
 	library.push(bookDeleted);
 	const json_books = JSON.stringify(library);
 	fs.writeFileSync('src/books.json', json_books, 'utf-8');
-	res.redirect('/');
+	res.render('index.html', { title: 'Taller Grupal', library, message: 'Book has been deleted!', book: '' })
 };
 
 const editBook = async (req, res) => {
@@ -27,7 +27,7 @@ const editBook = async (req, res) => {
 	const index = library.indexOf(resp);
 	library.slice(index, 1);
 	library.push({ id, title, publicationYear, author, description });
-	res.send({ status: 200, message: 'Book edited' });
+	res.render('index.html', { title: 'Taller Grupal', library, message: 'Book has been edited!', book: '' })
 };
 
 const addBook = async (req, res) => {
@@ -35,7 +35,7 @@ const addBook = async (req, res) => {
 	library.push({ ...req.body, id: id, status: 1, loan: 0 });
 	const json_books = JSON.stringify(library);
   fs.writeFileSync('src/books.json', json_books, 'utf-8');
-  res.redirect('/');
+  res.render('index.html', { title: 'Taller Grupal', library, message: 'Book has been created!', book: '' });
 };
 
 module.exports = {
