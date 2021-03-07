@@ -3,10 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const rootDir = path.dirname(require.main.filename);
 
-const getBooks = async (req, res) => {
-	res.send({ status: 200, response: library });
-};
-
 const getBook = async (req, res) => {
 	const { id } = req.params;
 	const resp = library.find(book => book.id === parseInt(id));
@@ -46,8 +42,7 @@ module.exports = {
 	addBook,
 	editBook,
 	deleteBook,
-	getBook,
-	getBooks
+	getBook
 };
 
 
