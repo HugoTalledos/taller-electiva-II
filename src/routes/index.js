@@ -5,11 +5,17 @@ router.get('/', (req, res) => {
 	res.render('index.html', { title: 'Taller Grupal' });
 });
 
-// router.get('/contact', (req, res) => {
-// 	res.render('contact.html', { title: 'Contact Page' });
-// });
+router.get('/create', (req, res) => {
+	res.render('index.html', { title: 'Taller Grupal' });
+});
+router.get('/edit', (req, res) => {
+	res.render('index.html', { title: 'Taller Grupal' });
+});
+router.get('/delete', (req, res) => {
+	res.render('index.html', { title: 'Taller Grupal' });
+});
+router.get('/list', (req, res) => {
+	res.render('index.html', { title: 'Taller Grupal' });
+});
 
-// router.post('/db-create', (req, res) => {
-// 	dbconnection.create_Message;
-// });
 module.exports = router;

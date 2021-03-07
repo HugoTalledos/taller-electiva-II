@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<%- include('partials/head.html') %>
+		<%- include('partials/navigation.html') %>
+</head>
+
+<body>
+	<div class="container-fluid" id="create">
+		<div class="row bg-light p-5 text-center">
+			<div class="col-md-3">
+				<i class="fas fa-book fa-10x"></i>
+			</div>
+			<div class="col-md-9">
+				<h3>Create Book</h3>
+				<form class="row g-3" action="/logic/book" method="POST">
+					<div class="col-md-4">
+						<label for="validationDefault01" class="form-label">Title</label>
+						<input type="text" name="titleBook" class="form-control" id="titleBook" required>
+					</div>
+					<div class="col-md-4">
+						<label for="validationDefault02" class="form-label">Author</label>
+						<input type="text" name="authorBook" class="form-control" id="authorBook" required>
+					</div>
+					<div class="col-md-4">
+						<label for="validationDefaultUsername" class="form-label">Publication Year</label>
+						<div class="input-group">
+							<input type="number" name="yearBook" min="1" class="form-control"
+								id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+						</div>
+					</div>
+					<div class=" col-md-12 mb-3">
+						<label for="validationTextarea" class="form-label">Description</label>
+						<textarea class="form-control" name="descriptionBook" id="descriptionBook" required></textarea>
+					</div>
+					<div class="col-12">
+						<button class="btn btn-primary" type="submit">Crear</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sección uno -->
+	<div class="container-fluid" id="edit">
+		<div class="row bg-dark text-white p-5 text-center">
+			<div class="col-md-3">
+				<i class="fas fa-edit fa-10x"></i>
+			</div>
+			<div class="col-md-9">
+				<h3>Edit Book</h3>
+				<form class="row g-3" action="/logic/book" method="PUT">
+					<div class="col-md-3">
+						<label>Book</label>
+						<select type="text" class="form-control" id="idBook" placeholder="Title" required>
+							<option value="0"> -- Selecciona un libro -- </option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<label for="validationDefault01" class="form-label">Title</label>
+						<input type="text" class="form-control" id="titleBook" required>
+					</div>
+					<div class="col-md-3">
+						<label for="validationDefault02" class="form-label">Author</label>
+						<input type="text" class="form-control" id="authorBook" required>
+					</div>
+					<div class="col-md-3">
+						<label for="validationDefaultUsername" class="form-label">Publication Year</label>
+						<div class="input-group">
+							<input type="number" min="1" class="form-control" id="yearBook"
+								aria-describedby="inputGroupPrepend2" required>
+						</div>
+					</div>
+					<div class=" col-md-12 mb-3">
+						<label for="validationTextarea" class="form-label">Description</label>
+						<textarea class="form-control" id="descriptionBook" required></textarea>
+					</div>
+					<div class="offset-lg-3 col-lg-3 col-12"><br>
+						<button type="submit" class="btn btn-success">Prestar</button>
+					</div>
+					<div class="col-lg-3 col-12"><br>
+						<button type="submit" class="btn btn-warning">Devolución</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="delete">
+		<div class="row bg-light p-5 text-center">
+			<div class="col-md-3">
+				<i class="fas fa-trash-alt fa-10x"></i>
+			</div>
+			<div class="col-md-9">
+				<h3>Delete Book</h3>
+				<div class="row">
+					<div class="col-lg-12 col-sm-12">
+						<label>Book</label>
+						<select type="text" class="form-control" id="titleBook" placeholder="Title" required>
+							<option value="0"> -- Selecciona un libro -- </option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="offset-lg-4 col-lg-4 col-12"><br>
+						<button type="button" class="btn btn-danger">Eliminar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="list">
+		<div class="row bg-dark text-white p-5 text-center">
+			<div class="col-md-3">
+				<i class="fas fa-anchor fa-10x"></i>
+			</div>
+			<div class="col-md-9">
+				<h3>Lista de libros</h3>
+				<table class="table table-secondary">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Title</th>
+							<th scope="col">Author</th>
+							<th scope="col">Year</th>
+						</tr>
+					</thead>
+					<tbody id="listBook">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<%- include('partials/footer.html')%>
+</body>
+
+</html>
