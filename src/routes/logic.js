@@ -5,7 +5,7 @@ const router = express.Router(); //Crear múltiples rutas y mantenerlas en archi
 
 router.post('/book', controller.addBook);
 router.put('/book', controller.editBook);
-router.get('/deleteBook/:id', controller.deleteBook);
+router.post('/deleteBook', controller.deleteBook);
 router.get('/book/:id', controller.getBook);
 router.get('/book', controller.getBooks);
 

@@ -1,45 +1,45 @@
 const library = require('../books.json');
+const fs = require('fs');
+const path = require('path');
+const rootDir = path.dirname(require.main.filename);
 
 const getBooks = async (req, res) => {
-	const { book: books } = library;
-	res.send({ status: 200, response: books });
+	res.send({ status: 200, response: library });
 };
 
 const getBook = async (req, res) => {
 	const { id } = req.params;
-	const { book: books } = library;
-	const resp = books.find(book => book.id === parseInt(id));
+	const resp = library.find(book => book.id === parseInt(id));
 	res.send({ status: 200, response: resp });
 };
 
 const deleteBook = async (req, res) => {
-	const { id } = req.params;
-	const { book: books } = library;
-	const resp = books.find(book => book.id === parseInt(id));
-	const bookDeleted = { ...resp, status: true };
-	const index = books.indexOf(resp);
-	books.slice(index, 1);
-	books.push(bookDeleted);
-	res.send({ status: 200, response: 'Book deleted' });
+	const { idBook } = req.body;
+	const resp = library.find(book => book.id === parseInt(idBook));
+	const bookDeleted = { ...resp, status: 0 };
+	const index = library.indexOf(resp);
+	library.splice(index, 1);
+	library.push(bookDeleted);
+	const json_books = JSON.stringify(library);
+	fs.writeFileSync('src/books.json', json_books, 'utf-8');
+	res.redirect('/');
 };
 
 const editBook = async (req, res) => {
 	const { id, title, publicationYear, author, description } = req.body;
-	const resp = books.find(book => book.id === parseInt(id));
-	const index = books.indexOf(resp);
-	books.slice(index, 1);
-	books.push({ id, title, publicationYear, author, description });
-	res.send({ status: 200, response: 'Book edited' });
+	const resp = library.find(book => book.id === parseInt(id));
+	const index = library.indexOf(resp);
+	library.slice(index, 1);
+	library.push({ id, title, publicationYear, author, description });
+	res.send({ status: 200, message: 'Book edited' });
 };
 
 const addBook = async (req, res) => {
-	const { book: books } = library;
 	let id = Math.floor(Math.random() * (999999 - 100000)) + 100000;
-		while ((utils.getBill(id, billsArray)).length > 0) {
-			id = Math.floor(Math.random() * (999999 - 100000)) + 100000;
-		}
-	books.push({ ...req.body, id: id });
-	res.send({ status: 200, response: 'Book added' });
+	library.push({ ...req.body, id: id, status: 1, loan: 0 });
+	const json_books = JSON.stringify(library);
+  fs.writeFileSync('src/books.json', json_books, 'utf-8');
+  res.redirect('/');
 };
 
 module.exports = {
@@ -49,3 +49,5 @@ module.exports = {
 	getBook,
 	getBooks
 };
+
+
